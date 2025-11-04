@@ -8,7 +8,7 @@ Allow: /
 # Disallow: /private/
 
 # Sitemap location
-Sitemap: https://www.closetdomain.com/sitemap.xml
+Sitemap: https://www.closet-domain.pt/sitemap.xml
 
 # Crawl delay (optional, helps prevent server overload)
 Crawl-delay: 1

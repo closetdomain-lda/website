@@ -4,7 +4,7 @@ Professional website for Closet Domain - Unipessoal Lda, specializing in custom 
 
 ## 🌐 Live Site
 
-Visit us at: [www.closetdomain.com](https://www.closetdomain.com)
+Visit us at: [www.closet-domain.pt](https://www.closet-domain.pt)
 
 ## 📋 About
 
