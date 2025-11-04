@@ -1,0 +1,32 @@
+# Files to exclude from Git repository
+
+# Node.js (not needed - no backend)
+node_modules/
+package.json
+package-lock.json
+server.js
+
+# Environment variables (contains sensitive data)
+.env
+.env.local
+.env.example
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp

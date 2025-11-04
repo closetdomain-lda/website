@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="pt" prefix="og: https://ogp.me/ns#">
+  <head>
+    <!-- Google Analytics 4 - Replace G-XXXXXXXXXX with your actual Measurement ID -->
+    <!-- Get your ID: https://analytics.google.com -> Admin -> Data Streams -> Measurement ID -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX", {
+        send_page_view: true,
+        anonymize_ip: true, // GDPR compliance
+      });
+
+      // Track button clicks
+      function trackEvent(category, action, label) {
+        gtag("event", action, {
+          event_category: category,
+          event_label: label,
+        });
+      }
+    </script>
+
+    <!-- Meta Pixel (Facebook) - Optional - Replace XXXXXXXXXXXXXXX with your Pixel ID -->
+    <!--
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'XXXXXXXXXXXXXXX');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"
+    /></noscript>
+    -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Performance & Security -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Primary Meta Tags -->
+    <title>
+      Closet Domain | Desenvolvimento Web & Soluções de Chatbot em Portugal
+    </title>
+    <meta
+      name="title"
+      content="Closet Domain | Desenvolvimento Web & Soluções de Chatbot"
+    />
+    <meta
+      name="description"
+      content="Websites profissionais e soluções de chatbot com IA para empresas em Portugal. Integração WhatsApp, reservas automatizadas e suporte 24/7. Entrega rápida e soluções personalizadas."
+    />
+    <meta
+      name="keywords"
+      content="desenvolvimento web portugal, soluções chatbot, integração whatsapp, reservas automatizadas, websites empresariais, chatbot IA, automação empresarial, sistema reservas restaurante"
+    />
+    <meta name="author" content="Closet Domain - Unipessoal Lda" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="language" content="Portuguese" />
+    <meta name="geo.region" content="PT" />
+    <meta name="geo.placename" content="Portugal" />
+    <link rel="canonical" href="https://www.closetdomain.com/" />
+    <link rel="alternate" hreflang="pt" href="https://www.closetdomain.com/" />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.closetdomain.com/en/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.closetdomain.com/"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.closetdomain.com/" />
+    <meta
+      property="og:title"
+      content="Closet Domain | Desenvolvimento Web & Soluções de Chatbot"
+    />
+    <meta
+      property="og:description"
+      content="Websites profissionais e soluções de chatbot com IA para empresas em Portugal. Integração WhatsApp, reservas automatizadas e suporte 24/7."
+    />
+    <meta
+      property="og:image"
+      content="https://www.closetdomain.com/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Closet Domain - Desenvolvimento Web e Chatbot"
+    />
+    <meta property="og:site_name" content="Closet Domain" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.closetdomain.com/" />
+    <meta
+      name="twitter:title"
+      content="Closet Domain | Desenvolvimento Web & Soluções de Chatbot"
+    />
+    <meta
+      name="twitter:description"
+      content="Websites profissionais e soluções de chatbot com IA para empresas em Portugal. Integração WhatsApp, reservas automatizadas e suporte 24/7."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.closetdomain.com/images/twitter-image.jpg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Closet Domain - Desenvolvimento Web e Chatbot"
+    />
+    <meta name="twitter:creator" content="@closetdomain" />
+    <meta name="twitter:site" content="@closetdomain" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Closet Domain",
+        "legalName": "Closet Domain - Unipessoal Lda",
+        "url": "https://www.closetdomain.com",
+        "logo": "https://www.closetdomain.com/images/logo.png",
+        "description": "Professional websites and intelligent AI chatbot solutions for businesses. WhatsApp integration, automated reservations, and 24/7 customer support.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "PT",
+          "addressLocality": "Portugal"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+351937358704",
+          "contactType": "customer service",
+          "email": "closetdomain@gmail.com",
+          "availableLanguage": ["en", "pt"]
+        },
+        "sameAs": [
+          "https://www.facebook.com/closetdomain",
+          "https://www.linkedin.com/company/closetdomain",
+          "https://www.instagram.com/closetdomain"
+        ],
+        "priceRange": "$$",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Portugal"
+        },
+        "serviceType": [
+          "Web Development",
+          "Chatbot Solutions",
+          "WhatsApp Integration",
+          "Website Maintenance"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Informational Websites",
+                "description": "Professional, fast-loading websites that showcase your business. Quick turnaround, modern design, and mobile-responsive."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Intelligent Chatbot",
+                "description": "AI-powered chatbot tailored to your business. Automate customer service, bookings, and more with WhatsApp integration."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Maintenance & Support",
+                "description": "Ongoing support and maintenance for your website and chatbot."
+              }
+            }
+          ]
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-brand">
+          <img
+            src="ClosetDomainLogoSmall.png"
+            alt="Closet Domain Logo"
+            class="nav-logo"
+          />
+        </div>
+        <ul class="nav-menu">
+          <button class="nav-close" aria-label="Close menu">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <li><a href="#home" data-en="Home" data-pt="Início">Início</a></li>
+          <li>
+            <a href="#services" data-en="Services" data-pt="Serviços"
+              >Serviços</a
+            >
+          </li>
+          <li>
+            <a href="#chatbot" data-en="Chatbot" data-pt="Chatbot">Chatbot</a>
+          </li>
+          <li>
+            <a href="#use-cases" data-en="Use Cases" data-pt="Casos de Uso"
+              >Casos de Uso</a
+            >
+          </li>
+          <li>
+            <a href="#about" data-en="About" data-pt="Sobre Nós">Sobre Nós</a>
+          </li>
+          <li>
+            <a href="#contacts" data-en="Contacts" data-pt="Contactos"
+              >Contactos</a
+            >
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            class="language-switcher"
+            id="languageSwitcher"
+            aria-label="Change language"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path
+                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+              ></path>
+            </svg>
+            <span class="language-text">PT</span>
+          </button>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <h1 class="hero-title">Transform Your Business Online</h1>
+            <p class="hero-subtitle">
+              Fast, professional websites and intelligent chatbot solutions
+              tailored to your needs
+            </p>
+            <div class="hero-buttons">
+              <a href="#contacts" class="btn btn-primary">Get Started</a>
+              <a href="#services" class="btn btn-secondary">Learn More</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="BackgroundImage2.jpg" alt="Business Dashboard" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <div class="stat-number">24</div>
+            <div class="stat-label">Hour Response Time</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div class="stat-number">100</div>
+            <div class="stat-label">% Commitment to Quality</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <div class="stat-number">3</div>
+            <div class="stat-label">Service Packages</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <div class="stat-number">7</div>
+            <div class="stat-label">Day Fast Delivery</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted By Section (Client Logos) - COMMENTED OUT UNTIL WE HAVE CLIENTS -->
+    <!--
+    <section class="trusted-by">
+        <div class="container">
+            <h3 class="trusted-by-title">Trusted by businesses across Portugal</h3>
+            <div class="logos-carousel">
+                <div class="logos-track">
+                    <div class="logo-item">
+                        <div class="logo-placeholder">Client 1</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">Client 2</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">Client 3</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">Client 4</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">Client 5</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">Client 6</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">Client 1</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">Client 2</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">Client 3</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">Client 4</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">Client 5</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-placeholder">Client 6</div>
+                    </div>
+                </div>
+            </div>
+            <p class="trusted-by-note">Replace placeholders with your actual client logos (recommended size: 200x80px, grayscale with color on hover)</p>
+        </div>
+    </section>
+    -->
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">
+          Simple, fast, and effective solutions for your business
+        </p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-urgency">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>7-day delivery</span>
+            </div>
+            <div class="service-icon">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Informational Websites</h3>
+            <p>
+              Professional, fast-loading websites that showcase your business.
+              Quick turnaround, modern design, and mobile-responsive.
+            </p>
+            <ul class="service-features">
+              <li>Fast delivery</li>
+              <li>Mobile responsive</li>
+              <li>SEO optimized</li>
+              <li>Easy to maintain</li>
+            </ul>
+            <div class="service-cta">
+              <span class="service-price">Starting from €500</span>
+              <a href="#contacts" class="btn btn-outline">Get Quote</a>
+            </div>
+          </div>
+          <div class="service-card featured">
+            <div class="service-badge">Most Popular</div>
+            <div class="service-urgency limited">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+              <span>Limited slots this month</span>
+            </div>
+            <div class="service-icon">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                ></path>
+                <circle cx="9" cy="10" r="1" fill="currentColor"></circle>
+                <circle cx="12" cy="10" r="1" fill="currentColor"></circle>
+                <circle cx="15" cy="10" r="1" fill="currentColor"></circle>
+              </svg>
+            </div>
+            <h3>Intelligent Chatbot</h3>
+            <p>
+              AI-powered chatbot tailored to your business. Automate customer
+              service, bookings, and more with WhatsApp integration.
+            </p>
+            <ul class="service-features">
+              <li>Custom-tailored for your business</li>
+              <li>WhatsApp integration</li>
+              <li>Automated reservations</li>
+              <li>24/7 customer support</li>
+            </ul>
+            <div class="service-cta">
+              <span class="service-price">Starting from €800</span>
+              <a href="#contacts" class="btn btn-primary">Get Started</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-urgency guarantee">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              <span>24h response guarantee</span>
+            </div>
+            <div class="service-icon">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Maintenance & Support</h3>
+            <p>
+              Ongoing support and maintenance for your website and chatbot. Keep
+              your digital presence running smoothly.
+            </p>
+            <ul class="service-features">
+              <li>Regular updates</li>
+              <li>Technical support</li>
+              <li>Performance monitoring</li>
+              <li>Content updates</li>
+            </ul>
+            <div class="service-cta">
+              <span class="service-price">From €50/month</span>
+              <a href="#contacts" class="btn btn-outline">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chatbot Features Section -->
+    <section id="chatbot" class="chatbot-features">
+      <div class="container">
+        <h2 class="section-title">Chatbot Features</h2>
+        <p class="section-subtitle">
+          Powerful automation that works for you 24/7
+        </p>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                ></path>
+              </svg>
+            </div>
+            <h3>WhatsApp Integration</h3>
+            <p>
+              Connect directly with your customers on WhatsApp, the platform
+              they already use daily.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3>Smart Reservations</h3>
+            <p>
+              Automated booking system that sends confirmation requests via
+              WhatsApp. Customers simply confirm or deny.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polygon
+                  points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                ></polygon>
+              </svg>
+            </div>
+            <h3>Instant Responses</h3>
+            <p>
+              Answer customer questions immediately, even outside business
+              hours.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h3>Custom Tailored</h3>
+            <p>
+              Every chatbot is customized to your specific business needs and
+              workflows.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3>Analytics Dashboard</h3>
+            <p>
+              Track interactions, bookings, and customer engagement with
+              detailed analytics.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Easy Management</h3>
+            <p>
+              We handle all the technical details. You focus on your business.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="use-cases">
+      <div class="container">
+        <h2 class="section-title">Perfect For</h2>
+        <p class="section-subtitle">
+          Our solutions work great for these businesses
+        </p>
+        <div class="use-cases-grid">
+          <div class="use-case-card">
+            <h3>Restaurants</h3>
+            <p>
+              Automated table reservations, menu inquiries, and customer service
+              via WhatsApp.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <h3>Salons & Spas</h3>
+            <p>
+              Appointment booking, service information, and schedule management.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <h3>Medical Clinics</h3>
+            <p>
+              Patient appointment scheduling, reminders, and basic inquiries.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <h3>Event Venues</h3>
+            <p>
+              Booking management, availability checking, and event coordination.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <h3>Retail Stores</h3>
+            <p>
+              Product inquiries, store hours, and customer support automation.
+            </p>
+          </div>
+          <div class="use-case-card">
+            <h3>Service Providers</h3>
+            <p>
+              Consultation booking, service information, and client
+              communication.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <span class="about-label">OUR STORY</span>
+            <h2 class="about-title">
+              What defines us is
+              <span class="highlight-orange">Integrity.</span>
+            </h2>
+            <h3 class="about-subtitle">
+              We stand for <span class="highlight-orange">it.</span>
+            </h3>
+            <p class="about-tagline">Since 2022 in the digital market</p>
+            <p class="about-description">
+              Closet Domain is a Portuguese company specializing in web
+              development and intelligent automation solutions. We are experts
+              in creating fast, professional informational websites and custom
+              chatbot services with WhatsApp integration.
+            </p>
+            <p class="about-description">
+              Our business partners range from local restaurants and service
+              providers to growing businesses across Portugal. What sets us
+              apart is our commitment to delivering fast results and
+              personalized solutions that work for each client's unique needs.
+            </p>
+            <blockquote class="about-quote">
+              <p>
+                "Closet Domain is proof that it's possible to succeed by working
+                with integrity and focusing on people and their talent."
+              </p>
+              <cite>— Founder, Closet Domain</cite>
+            </blockquote>
+            <a href="#contacts" class="btn-text">Learn More</a>
+          </div>
+          <div class="about-image">
+            <div class="stats-highlight">
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                  </svg>
+                </div>
+                <h4>Fast Delivery</h4>
+                <p>Projects completed within 7-14 days</p>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                    ></path>
+                  </svg>
+                </div>
+                <h4>Quality Guaranteed</h4>
+                <p>100% satisfaction or money back</p>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <h4>Dedicated Support</h4>
+                <p>Personal assistance throughout your project</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacts" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">
+          Ready to transform your business? Let's talk.
+        </p>
+        <div class="contact-info-centered">
+          <p class="contact-description">
+            We'd love to hear about your project and discuss how we can help
+            your business grow.
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <div>
+                <strong>Email</strong>
+                <p>
+                  <a href="mailto:closetdomain@gmail.com"
+                    >closetdomain@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+              </span>
+              <div>
+                <strong>Phone</strong>
+                <p><a href="tel:+351937358704">+351 937 358 704</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <div>
+                <strong>Location</strong>
+                <p>Portugal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent" style="display: none">
+      <div class="cookie-content">
+        <div class="cookie-text">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="7.5" cy="10.5" r="1.5" fill="currentColor"></circle>
+            <circle cx="16.5" cy="10.5" r="1.5" fill="currentColor"></circle>
+            <circle cx="12" cy="16.5" r="1.5" fill="currentColor"></circle>
+          </svg>
+          <div>
+            <p class="cookie-title">We use cookies</p>
+            <p class="cookie-description">
+              We use cookies to improve your experience and analyze site
+              traffic. By clicking "Accept", you consent to our use of cookies.
+            </p>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button id="cookieReject" class="cookie-btn cookie-btn-secondary">
+            Decline
+          </button>
+          <button id="cookieAccept" class="cookie-btn cookie-btn-primary">
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="back-to-top"
+      aria-label="Back to top"
+      style="display: none"
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/351937358704?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20vossos%20serviços."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contact us on WhatsApp"
+    >
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <path
+          d="M16 0C7.164 0 0 7.164 0 16c0 2.847.748 5.521 2.058 7.838L.068 30.732a.5.5 0 0 0 .634.634l6.894-1.99A15.933 15.933 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm8.28 22.365c-.348.98-1.725 1.796-2.816 2.044-.75.17-1.728.306-5.023-1.08-4.22-1.775-6.942-6.04-7.152-6.32-.21-.28-1.72-2.29-1.72-4.37 0-2.08 1.09-3.103 1.476-3.527.387-.424.843-.53 1.125-.53.282 0 .563.003.81.015.26.013.608-.099.95.724.348.838 1.186 2.892 1.29 3.102.104.21.173.456.035.736-.138.28-.207.456-.415.702-.207.247-.435.552-.622.74-.207.21-.424.437-.182.857.242.42 1.076 1.775 2.31 2.875 1.588 1.416 2.927 1.855 3.344 2.065.417.21.66.175.903-.105.242-.28 1.041-1.216 1.318-1.636.278-.42.556-.35.937-.21.381.14 2.415 1.14 2.832 1.346.417.21.695.315.797.49.103.175.103 1.01-.245 1.99z"
+          fill="currentColor"
+        />
+      </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img
+              src="ClosetDomainLogoSmall.png"
+              alt="Closet Domain Logo"
+              class="footer-logo"
+            />
+          </div>
+          <div class="footer-links">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <li><a href="#home">Início</a></li>
+              <li><a href="#services">Serviços</a></li>
+              <li><a href="#chatbot">Chatbot</a></li>
+              <li><a href="#contacts">Contactos</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contacto</h4>
+            <ul>
+              <li>
+                <a href="mailto:closetdomain@gmail.com"
+                  >closetdomain@gmail.com</a
+                >
+              </li>
+              <li><a href="tel:+351937358704">+351 937 358 704</a></li>
+              <li>Santarém, Portugal</li>
+            </ul>
+          </div>
+          <!-- <div class="footer-social">
+                    <h4>Siga-nos</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div> -->
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Closet Domain - Unipessoal Lda. Todos os direitos
+            reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
