@@ -251,7 +251,6 @@ body {
     line-height: 1.2;
     letter-spacing: -0.02em;
     color: #FFFFFF;
-    animation: fadeInUp 0.8s ease 0.1s both;
 }
 
 .hero-subtitle {
@@ -262,7 +261,6 @@ body {
     font-weight: 400;
     line-height: 1.6;
     color: #FFFFFF;
-    animation: fadeInUp 0.8s ease 0.3s both;
 }
 
 .hero-buttons {
@@ -270,24 +268,16 @@ body {
     gap: 1rem;
     justify-content: flex-start;
     flex-wrap: wrap;
-    animation: fadeInUp 0.8s ease 0.5s both;
 }
 
 .hero-image {
     position: relative;
-    animation: fadeInRight 0.8s ease;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-left: auto;
     max-width: 500px;
     height: 600px;
-}
-
-.hero-image:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2), 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .hero-image img {
@@ -299,14 +289,8 @@ body {
 }
 
 @keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Responsive for hero grid */
@@ -1546,116 +1530,72 @@ section {
 }
 
 /* Enhanced Animations */
+/* Simplified animations - reduced motion for better performance */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-/* Animation classes for scroll-triggered effects */
+/* Simplified animation classes - no transforms to prevent layout shift */
 .animate-on-scroll {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.4s ease;
 }
 
 .animate-on-scroll.animate-in {
     opacity: 1;
-    transform: translateY(0);
 }
 
 .slide-in-left {
     opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.4s ease;
 }
 
 .slide-in-left.animate-in {
     opacity: 1;
-    transform: translateX(0);
 }
 
 .slide-in-right {
     opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.4s ease;
 }
 
 .slide-in-right.animate-in {
     opacity: 1;
-    transform: translateX(0);
 }
 
-/* Section title animations */
+/* Section title animations - simplified */
 .section-title {
-    animation: fadeInDown 0.8s ease-out;
+    animation: fadeInDown 0.4s ease-out;
 }
 
 .section-subtitle {
-    animation: fadeInUp 0.8s ease-out 0.2s both;
+    animation: fadeInUp 0.4s ease-out 0.1s both;
 }
 
 /* Responsive Design */

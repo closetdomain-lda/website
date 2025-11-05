@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt" prefix="og: https://ogp.me/ns#">
   <head>
-    <!-- Google Analytics 4 -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-SV7ZNF5VRB"
-    ></script>
+    <!-- Google Analytics 4 - Deferred for performance -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-SV7ZNF5VRB", {
-        send_page_view: true,
-        anonymize_ip: true, // GDPR compliance
+      // Defer Google Analytics loading until after page is interactive
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          var script = document.createElement('script');
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-SV7ZNF5VRB';
+          script.async = true;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          window.gtag = gtag;
+          gtag("js", new Date());
+          gtag("config", "G-SV7ZNF5VRB", {
+            send_page_view: true,
+            anonymize_ip: true,
+          });
+        }, 1000); // Load 1 second after page load
       });
 
       // Track button clicks
       function trackEvent(category, action, label) {
-        gtag("event", action, {
-          event_category: category,
-          event_label: label,
-        });
+        if (typeof gtag !== 'undefined') {
+          gtag("event", action, {
+            event_category: category,
+            event_label: label,
+          });
+        }
       }
     </script>
 
@@ -234,7 +241,165 @@
       }
     </script>
 
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Critical CSS Inlined -->
+    <style>
+      /* Critical above-the-fold styles */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      :root {
+        --primary-color: #001F5F;
+        --accent-primary: #FF6B35;
+        --accent-hover: #E85A28;
+        --accent-light: #FF8C5A;
+        --text-dark: #0F172A;
+        --text-medium: #475569;
+        --text-light: #64748B;
+        --bg-white: #FFFFFF;
+      }
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--text-medium);
+        overflow-x: hidden;
+        font-size: 14px;
+        background: var(--bg-white);
+      }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+      /* Navbar - Critical */
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #14005c;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+      }
+      .navbar .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0.5rem 20px;
+        gap: 5rem;
+        max-width: 80%;
+      }
+      .nav-brand { display: flex; align-items: center; }
+      .nav-logo { height: 100px; width: auto; }
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2.5rem;
+      }
+      .nav-menu a {
+        text-decoration: none;
+        color: #E0F2FE;
+        font-weight: 400;
+        font-size: 0.95rem;
+      }
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-left: auto;
+      }
+      .language-switcher {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: rgba(255, 107, 53, 0.15);
+        border: 2px solid var(--accent-light);
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+      .hamburger { display: none; }
+
+      /* Hero - Critical */
+      .hero {
+        min-height: 100vh;
+        padding: 120px 0;
+        background: url('BackgroundImage1.jpg') center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: -20%;
+        left: -20%;
+        width: 140%;
+        height: 140%;
+        background: linear-gradient(135deg, #FF6B35 0%, #FF8C5A 20%, #A06CD5 40%, #6A82FB 60%, #0066FF 80%, #003087 100%);
+        opacity: 0.15;
+        z-index: 0;
+        transform: rotate(-5deg);
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1.5fr;
+        gap: 4rem;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+      .hero-title {
+        font-size: 4rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        color: #FFFFFF;
+      }
+      .hero-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 2.5rem;
+        max-width: 600px;
+        color: #FFFFFF;
+      }
+      .hero-buttons {
+        display: flex;
+        gap: 1rem;
+      }
+      .btn {
+        padding: 0.875rem 2rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+      }
+      .btn-primary {
+        background: var(--accent-primary);
+        color: var(--bg-white);
+      }
+      .btn-secondary {
+        background: transparent;
+        color: #FFFFFF;
+        border: 2px solid #FFFFFF;
+      }
+      .hero-image {
+        max-width: 500px;
+        height: 600px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-left: auto;
+      }
+      .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    </style>
+
+    <!-- Load non-critical CSS asynchronously -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
   </head>
   <body>
     <!-- Navigation -->

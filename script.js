@@ -200,24 +200,11 @@ serviceCards.forEach(card => {
     });
 });
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero && scrolled < window.innerHeight) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        hero.style.opacity = 1 - (scrolled / window.innerHeight) * 0.5;
-    }
-});
+// Removed parallax effect for better performance
 
-// Loading animation
+// Simplified loading - no animation to prevent layout shift
 window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.3s ease';
-
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
+    document.body.style.opacity = '1';
 });
 
 // Function to update active nav link
