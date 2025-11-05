@@ -13,16 +13,17 @@ function animateCounter(element, target, duration = 1500, suffix = '') {
     }, 16);
 }
 
-// Trigger counters on page load (simpler than IntersectionObserver)
-window.addEventListener('load', () => {
-    const statNumbers = document.querySelectorAll('.stat-number');
-    statNumbers.forEach((stat) => {
-        const text = stat.textContent;
-        const number = parseInt(text.replace(/\D/g, ''));
-        const suffix = text.replace(/[0-9]/g, '');
-        animateCounter(stat, number, 1500, suffix);
-    });
-});
+// Counter animation disabled - stats now use static values like "24/7" and "<1s"
+// Keeping the function for potential future use
+// window.addEventListener('load', () => {
+//     const statNumbers = document.querySelectorAll('.stat-number');
+//     statNumbers.forEach((stat) => {
+//         const text = stat.textContent;
+//         const number = parseInt(text.replace(/\D/g, ''));
+//         const suffix = text.replace(/[0-9]/g, '');
+//         animateCounter(stat, number, 1500, suffix);
+//     });
+// });
 
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
@@ -128,20 +129,20 @@ const translations = {
         navContacts: 'Contactos',
 
         // Hero Section
-        heroTitle: 'Transforme o Seu Negócio Online',
-        heroSubtitle: 'Soluções digitais inteligentes que fazem crescer o seu negócio',
+        heroTitle: 'Agentes de IA Que Atendem, Informam e Automatizam 24/7',
+        heroSubtitle: 'IA que aprende com os seus documentos e responde com precisão (tecnologia RAG). Atendimento automático, respostas instantâneas e dashboard de análise. WhatsApp opcional.',
         heroCTA: 'Começar Agora',
-        heroCTA2: 'Saber Mais',
+        heroCTA2: 'Ver Planos',
 
         // Stats Section
-        stat1Number: '24',
-        stat1Label: 'Horas de Tempo de Resposta',
-        stat2Number: '100',
-        stat2Label: '% Compromisso com Qualidade',
-        stat3Number: '3',
-        stat3Label: 'Pacotes de Serviços',
-        stat4Number: '7',
-        stat4Label: 'Dias de Entrega Rápida',
+        stat1Number: '<1s',
+        stat1Label: 'Tempo de Resposta IA',
+        stat2Number: '24/7',
+        stat2Label: 'Sempre Disponível',
+        stat3Number: '10min',
+        stat3Label: 'Setup no Website',
+        stat4Number: '48h',
+        stat4Label: 'Configuração Completa',
 
         // Services Section
         servicesTitle: 'Os Nossos Serviços',
@@ -177,22 +178,22 @@ const translations = {
 
         // About Section
         aboutLabel: 'A NOSSA HISTÓRIA',
-        aboutTitle1: 'O que nos define é',
-        aboutTitle2: 'Excelência.',
-        aboutSubtitle1: 'Entregamos',
-        aboutSubtitle2: 'resultados.',
-        aboutTagline: 'Transformando negócios desde 2022',
-        aboutDesc1: 'A Closet Domain é uma empresa portuguesa especializada em desenvolvimento web à medida e implementação de agentes de IA. Criamos websites personalizados e agentes inteligentes que automatizam processos e aumentam a eficiência do seu negócio.',
-        aboutDesc2: 'Trabalhamos com empresas de diversos setores que procuram soluções digitais verdadeiramente personalizadas. Cada projeto é desenvolvido especificamente para as necessidades do cliente, desde o design até à integração com sistemas existentes. Os nossos agentes de IA são treinados com os dados do seu negócio para entregar resultados precisos e relevantes.',
-        aboutQuote: '"A Closet Domain combina desenvolvimento personalizado com inteligência artificial avançada para criar soluções que realmente transformam negócios."',
-        aboutQuoteAuthor: '— Miguel Marçal, Co-Fundador',
-        aboutCTA: 'Saber Mais',
-        aboutHighlight1Title: 'Entrega Rápida',
-        aboutHighlight1Desc: 'Projetos concluídos entre 7-14 dias',
+        aboutTitle1: 'O que nos define é a',
+        aboutTitle2: 'Integridade.',
+        aboutSubtitle1: 'Nós',
+        aboutSubtitle2: 'defendemo-la.',
+        aboutTagline: 'Construindo o futuro da automação empresarial',
+        aboutDesc1: 'A Closet Domain é uma empresa portuguesa especializada em websites profissionais e automação com IA. Desenvolvemos a AI Agent Factory, uma plataforma avançada que usa tecnologia RAG com pesquisa vetorial Qdrant e OpenAI para fornecer atendimento ao cliente inteligente e contextual.',
+        aboutDesc2: 'Os nossos clientes vão desde restaurantes e salões locais a negócios de e-commerce e serviços profissionais em todo Portugal. Oferecemos tanto serviço totalmente gerido (tratamos de tudo) como opções self-service (você controla o dashboard), garantindo que cada negócio encontra a solução perfeita.',
+        aboutQuote: '"A Closet Domain prova que o sucesso vem de trabalhar com integridade, focar na inovação e capacitar negócios com tecnologia de IA que realmente funciona."',
+        aboutQuoteAuthor: '— Fundador, Closet Domain',
+        aboutCTA: 'Entrar em Contacto',
+        aboutHighlight1Title: 'Configuração Rápida',
+        aboutHighlight1Desc: 'Agentes IA ativos em 48h, websites em 7-14 dias',
         aboutHighlight2Title: 'Qualidade Garantida',
-        aboutHighlight2Desc: '100% satisfação ou devolução do dinheiro',
-        aboutHighlight3Title: 'Suporte Dedicado',
-        aboutHighlight3Desc: 'Assistência personalizada durante todo o projeto',
+        aboutHighlight2Desc: '100% de satisfação ou garantia de devolução',
+        aboutHighlight3Title: 'Suporte Flexível',
+        aboutHighlight3Desc: 'Escolha serviço gerido ou self-service com suporte completo',
 
         // Chatbot Section
         chatbotTitle: 'Capacidades dos Agentes de IA',
@@ -256,20 +257,20 @@ const translations = {
         navContacts: 'Contact',
 
         // Hero Section
-        heroTitle: 'Transform Your Business Online',
-        heroSubtitle: 'Smart digital solutions that grow your business',
+        heroTitle: 'AI Agents That Serve, Inform & Automate 24/7',
+        heroSubtitle: 'AI that learns from your documents and responds with precision (RAG technology). Automated customer service, instant responses, and analytics dashboard. WhatsApp optional.',
         heroCTA: 'Get Started',
-        heroCTA2: 'Learn More',
+        heroCTA2: 'See Plans',
 
         // Stats Section
-        stat1Number: '24',
-        stat1Label: 'Hour Response Time',
-        stat2Number: '100',
-        stat2Label: '% Commitment to Quality',
-        stat3Number: '3',
-        stat3Label: 'Service Packages',
-        stat4Number: '7',
-        stat4Label: 'Day Fast Delivery',
+        stat1Number: '<1s',
+        stat1Label: 'AI Response Time',
+        stat2Number: '24/7',
+        stat2Label: 'Always Available',
+        stat3Number: '10min',
+        stat3Label: 'Website Setup',
+        stat4Number: '48h',
+        stat4Label: 'Full Configuration',
 
         // Services Section
         servicesTitle: 'Our Services',
@@ -306,21 +307,21 @@ const translations = {
         // About Section
         aboutLabel: 'OUR STORY',
         aboutTitle1: 'What defines us is',
-        aboutTitle2: 'Excellence.',
-        aboutSubtitle1: 'We deliver',
-        aboutSubtitle2: 'results.',
-        aboutTagline: 'Transforming businesses since 2022',
-        aboutDesc1: 'Closet Domain is a Portuguese company specializing in custom web development and AI agent implementation. We create tailored websites and intelligent agents that automate processes and increase your business efficiency.',
-        aboutDesc2: 'We work with companies across various sectors looking for truly personalized digital solutions. Each project is developed specifically for the client\'s needs, from design to integration with existing systems. Our AI agents are trained with your business data to deliver accurate and relevant results.',
-        aboutQuote: '"Closet Domain combines custom development with advanced artificial intelligence to create solutions that truly transform businesses."',
-        aboutQuoteAuthor: '— Miguel Marçal, Co-Founder',
-        aboutCTA: 'Learn More',
-        aboutHighlight1Title: 'Fast Delivery',
-        aboutHighlight1Desc: 'Projects completed within 7-14 days',
+        aboutTitle2: 'Integrity.',
+        aboutSubtitle1: 'We stand for',
+        aboutSubtitle2: 'it.',
+        aboutTagline: 'Building the future of business automation',
+        aboutDesc1: 'Closet Domain is a Portuguese company specializing in professional websites and AI-powered automation. We developed AI Agent Factory, an advanced platform using RAG technology with Qdrant vector search and OpenAI to deliver intelligent, context-aware customer service.',
+        aboutDesc2: 'Our clients range from local restaurants and salons to e-commerce businesses and professional services across Portugal. We offer both fully managed service (we handle everything) and self-service options (you control your dashboard), ensuring every business finds the perfect fit.',
+        aboutQuote: '"Closet Domain proves that success comes from working with integrity, focusing on innovation, and empowering businesses with AI technology that actually works."',
+        aboutQuoteAuthor: '— Founder, Closet Domain',
+        aboutCTA: 'Get In Touch',
+        aboutHighlight1Title: 'Fast Setup',
+        aboutHighlight1Desc: 'AI agents live in 48 hours, websites in 7-14 days',
         aboutHighlight2Title: 'Quality Guaranteed',
-        aboutHighlight2Desc: '100% satisfaction or money back',
-        aboutHighlight3Title: 'Dedicated Support',
-        aboutHighlight3Desc: 'Personal assistance throughout your project',
+        aboutHighlight2Desc: '100% satisfaction or money back guarantee',
+        aboutHighlight3Title: 'Flexible Support',
+        aboutHighlight3Desc: 'Choose managed service or self-service with full support',
 
         // Chatbot Section
         chatbotTitle: 'AI Agent Capabilities',
