@@ -64,6 +64,10 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
+    <!-- Preload critical hero image for LCP -->
+    <link rel="preload" as="image" href="BackgroundImage1.webp" type="image/webp" />
+    <link rel="preload" as="image" href="BackgroundImage2.webp" type="image/webp" fetchpriority="high" />
+
     <!-- Google Fonts - Async Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -320,7 +324,7 @@
       .hero {
         min-height: 100vh;
         padding: 120px 0;
-        background: url('BackgroundImage1.jpg') center/cover no-repeat;
+        background: url('BackgroundImage1.webp') center/cover no-repeat;
         display: flex;
         align-items: center;
         position: relative;
@@ -501,7 +505,10 @@
             </div>
           </div>
           <div class="hero-image">
-            <img src="BackgroundImage2.jpg" alt="Business Dashboard" width="500" height="600" fetchpriority="high" />
+            <picture>
+              <source srcset="BackgroundImage2.webp" type="image/webp" />
+              <img src="BackgroundImage2.jpg" alt="Business Dashboard" width="500" height="600" fetchpriority="high" />
+            </picture>
           </div>
         </div>
       </div>

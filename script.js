@@ -126,13 +126,12 @@ sectionTitles.forEach(title => {
     fadeInObserver.observe(title);
 });
 
-// Observe and stagger cards and feature items
+// Observe cards - removed stagger for better performance
 const cardContainers = document.querySelectorAll('.services-grid, .features-grid, .use-cases-grid');
 cardContainers.forEach(container => {
     const cards = container.querySelectorAll('.service-card, .feature-item, .use-case-card');
-    cards.forEach((card, index) => {
+    cards.forEach((card) => {
         card.classList.add('animate-on-scroll');
-        card.style.transitionDelay = `${index * 0.1}s`;
         fadeInObserver.observe(card);
     });
 });
@@ -160,11 +159,10 @@ if (contactContent) {
     fadeInObserver.observe(contactContent);
 }
 
-// Observe highlight items in about section
+// Observe highlight items - removed stagger for performance
 const highlightItems = document.querySelectorAll('.highlight-item');
-highlightItems.forEach((item, index) => {
+highlightItems.forEach((item) => {
     item.classList.add('animate-on-scroll');
-    item.style.transitionDelay = `${index * 0.15}s`;
     fadeInObserver.observe(item);
 });
 
