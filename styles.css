@@ -131,8 +131,16 @@ body {
     letter-spacing: 0;
 }
 
-.nav-menu a:hover {
+.nav-menu a:hover,
+.nav-menu a:focus {
     color: var(--accent-light);
+}
+
+/* Active nav link styling - moved from JS to CSS for performance */
+.nav-menu a:active,
+.nav-menu a[aria-current="page"] {
+    color: var(--accent-light);
+    font-weight: 500;
 }
 
 .nav-actions {

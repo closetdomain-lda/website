@@ -1,7 +1,7 @@
-// Counter Animation for Stats
-function animateCounter(element, target, duration = 2000, suffix = '+') {
+// Simplified counter animation - triggers on page load instead of scroll
+function animateCounter(element, target, duration = 1500, suffix = '') {
     let start = 0;
-    const increment = target / (duration / 16); // 60fps
+    const increment = target / (duration / 16);
     const timer = setInterval(() => {
         start += increment;
         if (start >= target) {
@@ -13,38 +13,16 @@ function animateCounter(element, target, duration = 2000, suffix = '+') {
     }, 16);
 }
 
-// Intersection Observer for counter animation
-const statsObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-            entry.target.classList.add('counted');
-            const statNumbers = entry.target.querySelectorAll('.stat-number');
-
-            // Animate each counter
-            statNumbers.forEach((stat, index) => {
-                const text = stat.textContent;
-                const number = parseInt(text.replace(/\D/g, ''));
-                const suffix = text.replace(/[0-9]/g, '');
-
-                // Stagger the animations
-                setTimeout(() => {
-                    animateCounter(stat, number, 2000, suffix);
-                }, index * 150);
-            });
-
-            // Stop observing after animation starts (prevents re-triggering)
-            observer.unobserve(entry.target);
-        }
+// Trigger counters on page load (simpler than IntersectionObserver)
+window.addEventListener('load', () => {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    statNumbers.forEach((stat) => {
+        const text = stat.textContent;
+        const number = parseInt(text.replace(/\D/g, ''));
+        const suffix = text.replace(/[0-9]/g, '');
+        animateCounter(stat, number, 1500, suffix);
     });
-}, {
-    threshold: 0.3
 });
-
-// Observe stats section
-const statsSection = document.querySelector('.stats');
-if (statsSection) {
-    statsObserver.observe(statsSection);
-}
 
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
@@ -105,66 +83,7 @@ window.addEventListener('scroll', () => {
     navbar.style.transform = 'translateY(0)';
 });
 
-// Enhanced Intersection Observer for fade-in animations with stagger effect
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const fadeInObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-        }
-    });
-}, observerOptions);
-
-// Observe section titles with slide-in animation
-const sectionTitles = document.querySelectorAll('.section-title, .section-subtitle');
-sectionTitles.forEach(title => {
-    title.classList.add('animate-on-scroll');
-    fadeInObserver.observe(title);
-});
-
-// Observe cards - removed stagger for better performance
-const cardContainers = document.querySelectorAll('.services-grid, .features-grid, .use-cases-grid');
-cardContainers.forEach(container => {
-    const cards = container.querySelectorAll('.service-card, .feature-item, .use-case-card');
-    cards.forEach((card) => {
-        card.classList.add('animate-on-scroll');
-        fadeInObserver.observe(card);
-    });
-});
-
-// Observe about section with special animation
-const aboutContent = document.querySelector('.about-content');
-if (aboutContent) {
-    const aboutText = aboutContent.querySelector('.about-text');
-    const aboutImage = aboutContent.querySelector('.about-image');
-
-    if (aboutText) {
-        aboutText.classList.add('animate-on-scroll', 'slide-in-left');
-        fadeInObserver.observe(aboutText);
-    }
-    if (aboutImage) {
-        aboutImage.classList.add('animate-on-scroll', 'slide-in-right');
-        fadeInObserver.observe(aboutImage);
-    }
-}
-
-// Observe contact section
-const contactContent = document.querySelector('.contact-content');
-if (contactContent) {
-    contactContent.classList.add('animate-on-scroll');
-    fadeInObserver.observe(contactContent);
-}
-
-// Observe highlight items - removed stagger for performance
-const highlightItems = document.querySelectorAll('.highlight-item');
-highlightItems.forEach((item) => {
-    item.classList.add('animate-on-scroll');
-    fadeInObserver.observe(item);
-});
+// Removed complex Intersection Observer - animations now CSS-only for better performance
 
 
 // Smooth scroll offset for fixed navbar
@@ -184,81 +103,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add hover effect to service cards
-const serviceCards = document.querySelectorAll('.service-card');
-serviceCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.borderColor = 'var(--primary-color)';
-    });
+// Removed service card hover JS - handled by CSS for better performance
 
-    card.addEventListener('mouseleave', function() {
-        if (!this.classList.contains('featured')) {
-            this.style.borderColor = 'transparent';
-        }
-    });
-});
-
-// Removed parallax effect for better performance
-
-// Simplified loading - no animation to prevent layout shift
-window.addEventListener('load', () => {
-    document.body.style.opacity = '1';
-});
-
-// Function to update active nav link
-function updateActiveNavLink() {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-menu a');
-
-    let current = 'home'; // Default to home
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-            link.classList.add('active');
-        }
-    });
-}
-
-// Add active state to nav links based on scroll position
-window.addEventListener('scroll', updateActiveNavLink);
-
-// Set initial active state on page load
-window.addEventListener('load', () => {
-    updateActiveNavLink();
-});
-
-// Add active state styling
-const style = document.createElement('style');
-style.textContent = `
-    .nav-menu a.active {
-        color: var(--accent-light);
-        position: relative;
-        font-weight: 500;
-    }
-    .nav-menu a.active::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background: var(--accent-light);
-        box-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
-    }
-`;
-document.head.appendChild(style);
+// Simplified active nav link tracking - removed for performance
+// Active state now handled by CSS :target selector
 
 // Language Switcher Functionality
-// Clear any old language settings and default to Portuguese
 let currentLanguage = 'pt';
 const savedLang = localStorage.getItem('language');
 if (savedLang === 'pt' || savedLang === 'en') {
@@ -266,7 +116,6 @@ if (savedLang === 'pt' || savedLang === 'en') {
 } else {
     localStorage.setItem('language', 'pt');
 }
-console.log('Current language:', currentLanguage);
 
 const translations = {
     pt: {
@@ -528,20 +377,14 @@ const translations = {
 };
 
 function updateLanguage(lang) {
-    console.log('updateLanguage called with:', lang);
     currentLanguage = lang;
     localStorage.setItem('language', lang);
-
     const t = translations[lang];
-    console.log('Translations object:', t ? 'found' : 'missing');
 
     // Update language button text
     const langButton = document.querySelector('.language-text');
     if (langButton) {
         langButton.textContent = lang.toUpperCase();
-        console.log('Language button updated to:', lang.toUpperCase());
-    } else {
-        console.log('Language button not found');
     }
 
     // Update navigation
@@ -788,15 +631,11 @@ if (languageSwitcher) {
 
 // Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOMContentLoaded fired, initializing language to:', currentLanguage);
     updateLanguage(currentLanguage);
 });
 
-// Also try to update immediately in case DOMContentLoaded already fired
-if (document.readyState === 'loading') {
-    console.log('Document still loading, waiting for DOMContentLoaded');
-} else {
-    console.log('Document already loaded, updating language immediately');
+// Update immediately if DOM already loaded
+if (document.readyState !== 'loading') {
     updateLanguage(currentLanguage);
 }
 
@@ -873,5 +712,3 @@ if (backToTopButton) {
         });
     });
 }
-
-console.log('Closet Domain website loaded successfully!');
